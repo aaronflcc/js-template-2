@@ -21,7 +21,7 @@ body {
     display: grid;
     grid-template-columns: 300px 300px;
     grid-gap: 1px 1px;
-    width: 610px;
+    width: 602px;
     /* for three columns */
     /*
     grid-template-columns: 300px 300px 300px;
@@ -97,7 +97,7 @@ input[type=text] {
 @media only screen and (max-width: 920px) {
     .multi-col-grid {
         grid-template-columns: 300px 300px;
-        width: 610px;
+        width: 602px;
     }
     .titlePanel {
         grid-column: 1 / 3;

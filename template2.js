@@ -1,3 +1,6 @@
+/*jslint browser: true*/
+/*global window, document, console*/
+/*eslint no-console: "off" */
 function doAfterPageLoad() {
 
 }
@@ -9,7 +12,7 @@ function action1() {
 
 function action2() {
     console.log("action2 called");
-    /*
+    
     //Example code: store text fields, and change the
     //content of every paragraph in the second panel
     //to a combination (concatenation) of text strings
@@ -20,5 +23,5 @@ function action2() {
     for (var i in paragraphs) {
         paragraphs[i].innerHTML = str + ", " + str2;
     }
-    */
+    
 }

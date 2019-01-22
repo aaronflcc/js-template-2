@@ -5,7 +5,7 @@
  * to elements with the same width and height 
  * (padding and border are included in total of width and height) 
  */
- * {
+* {
     box-sizing: border-box;
 }
 
@@ -13,15 +13,15 @@ body {
     /* system ui or closest to it on most browsers - see: http://furbo.org/stuff/systemfonts-new.html */
     font-size: 1em;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    background-color: #323875;
+    background-color: #FEFDFE;
 }
 
 .multi-col-grid {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 300px 300px;
-    grid-gap: 1px 1px;
-    width: 602px;
+    grid-gap: 0px 10px;
+    width: 610px;
     /* for three columns */
     /*
     grid-template-columns: 300px 300px 300px;
@@ -35,8 +35,8 @@ body {
     text-align: center;
     font-size: 1.3em;
  
-    color: #7D82B0;
-    background-color: #323875;
+    color: #6f7395;
+    background-color: #FEFDFE;
 
     /* for three columns */
     /*
@@ -46,15 +46,16 @@ body {
 
 .panel {
     padding: 0px 10px;
-    color: #000;
-    background-color: #D4A36A;
+    color: #6f7395;
+    background-color: #FEFDFE;
+    border: 1px solid #EEEDEE;
 }
 
 .panel-buttons {
     padding: 10px 10px;
-    color: #000;
-    background-color: #28794B;
-    border: 1px solid #003D1B;
+    color: #6f7395;
+    background-color: #FEFDFE;
+    border: 0px solid #EEEDEE;
 }
 
 button {
@@ -65,8 +66,8 @@ button {
  
     font-size: 0.75em;
 
-    background-color: #0F5B30;
-    color: #79B694;
+    background-color: #28794B;
+    color: #EEEDEE;
     border-color: #4C986D;
 
     -webkit-transition-duration: 0.2s;
@@ -74,7 +75,7 @@ button {
 }
 
 button:hover {
-    background-color:  #28794B;
+    background-color:  #0F5B30;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -85,11 +86,21 @@ button:active {
 }
 
 input[type=text] {
-    background-color: #FFD8AA;
+    background-color: #EEEDEE;
     width: 100%;
     padding: 12px 20px;
     display: inline-block;
-    border: 1px solid #804E15;
+    border: 0px solid #EEEDEE;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input[type=text]:focus {
+    background-color: #FEFDFE;
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #EEEDEE;
     border-radius: 4px;
     font-size: 1em;
 }
@@ -115,6 +126,7 @@ input[type=text] {
 }
 
 /*
-color scheme on paletton.com: 
+original color scheme on paletton.com: 
 http://paletton.com/#uid=30D0u0kllllaFw0g0qFqFg0w0aF
+Went much lighter and simpler afterwards
 */

@@ -1,3 +1,24 @@
+/*
+ * Import some open Google fonts from: https://fonts.google.com
+ * Oswald for titles and larger headings and Roboto for body text (sans-serif as fallback)
+ * MedievalSharp saving time for in-class examples (cursive as fallback)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=MedievalSharp&display=swap');
+
+:root {
+    --main-bg-color: #DDDDDD;
+    --panel-bg-color:  #FEFDFE;
+    --main-text-color: #000;
+    --title-text-color: #EEEDEE;
+    --title-bg-color: #404040;
+    --border-subtle-color: #EEEDEE;
+    --color-accent: #28794B;
+    --color-accent-light: #4C986D;
+    --color-accent-dark: #0F5B30;
+    --textarea-bg-color: var(--main-bg-color);
+    --textarea-text-color: #000;
+}
+
 /* 
  * box-sizing: border-box;
  * Actual width and height of an element is comparatively sized the same 
@@ -10,10 +31,13 @@
 }
 
 body {
-    /* system ui or closest to it on most browsers - see: http://furbo.org/stuff/systemfonts-new.html */
     font-size: 1em;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    background-color: #FEFDFE;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
 }
 
 .multi-col-grid {
@@ -31,31 +55,32 @@ body {
 
 .titlePanel {
  
-    grid-column: 1 / 3;
+    grid-column: 1 / span 2;
     text-align: center;
     font-size: 1.3em;
+    font-family: 'Oswald', sans-serif;
  
-    color: #6f7395;
-    background-color: #FEFDFE;
+    color: var(--title-text-color);
+    background-color: var(--title-bg-color);
 
     /* for three columns */
     /*
-    grid-column: 1 / 4;
+    grid-column: 1 / span 3;
     */
 }
 
 .panel {
     padding: 0px 10px;
-    color: #6f7395;
-    background-color: #FEFDFE;
-    border: 1px solid #EEEDEE;
+    color: var(--main-text-color);
+    background-color: var(--panel-bg-color);
+    border: 1px solid var(--border-subtle-color);
 }
 
 .panel-buttons {
     padding: 10px 10px;
-    color: #6f7395;
-    background-color: #FEFDFE;
-    border: 0px solid #EEEDEE;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+    border: 0px solid var(--border-subtle-color);
 }
 
 button {
@@ -66,41 +91,43 @@ button {
  
     font-size: 0.75em;
 
-    background-color: #28794B;
-    color: #EEEDEE;
-    border-color: #4C986D;
+    background-color: var(--color-accent);
+    color: var(--border-subtle-color);
+    border-color: var(--color-accent-dark);
 
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
 }
 
 button:hover {
-    background-color:  #0F5B30;
+    color: white;
+    background-color:  var(--color-accent-light);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 button:active {
-    background-color: #0F5B30;
+    color: white;
+    background-color: var(--color-accent-light);
     transform: translateY(2px);
     box-shadow: 0 0 0 0 rgba(0,0,0,0,0);
 }
 
 input[type=text] {
-    background-color: #EEEDEE;
+    background-color: var(--border-subtle-color);
     width: 100%;
     padding: 12px 20px;
     display: inline-block;
-    border: 0px solid #EEEDEE;
+    border: 0px solid var(--border-subtle-color);
     border-radius: 4px;
     font-size: 1em;
 }
 
 input[type=text]:focus {
-    background-color: #FEFDFE;
+    background-color: var(--main-bg-color);
     width: 100%;
     padding: 12px 20px;
     display: inline-block;
-    border: 1px solid #EEEDEE;
+    border: 1px solid var(--border-subtle-color);
     border-radius: 4px;
     font-size: 1em;
 }
@@ -111,7 +138,7 @@ input[type=text]:focus {
         width: 602px;
     }
     .titlePanel {
-        grid-column: 1 / 3;
+        grid-column: 1 / span 2;
     }
 }
 
@@ -121,7 +148,7 @@ input[type=text]:focus {
         width: 300px;
     }
     .titlePanel {
-        grid-column: 1 / 2;
+        grid-column: 1 / span 1;
     }
 }
 

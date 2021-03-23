@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Template2</title>
-        <script src="template2.js"></script>
         <link rel="stylesheet" href="template2.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -13,16 +12,14 @@
             </div>
             <div class="panel" id="firstPanel">
                 <p>First Panel</p>
-                <form name="form">
-                    <p>
-                        Text 1
-                        <input type="text" name="text1">
-                    </p>
-                    <p>
-                        Text 2
-                        <input type="text" name="text2">
-                    </p>
-                </form>
+                <p>
+                    Text 1
+                    <input type="text" id="text1">
+                </p>
+                <p>
+                    Text 2
+                    <input type="text" id="text2">
+                </p>
             </div>
             <div class="panel" id="secondPanel">
                 <p>Second Panel</p>
@@ -39,5 +36,10 @@
                 <button type="button" onclick="action2();">Action 2</button>
             </div>
         </div>
+<!--
+    Keep script element at bottom of body so body can load 
+    all elements into DOM before script tries to access them. 
+-->
+        <script src="template2.js"></script>
     </body>
 </html>

@@ -43,9 +43,12 @@ h1, h2, h3 {
 .multi-col-grid {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 300px 300px;
     grid-gap: 0px 10px;
+
+    /* for two columns */
+    grid-template-columns: 300px 300px;
     width: 610px;
+
     /* for three columns */
     /*
     grid-template-columns: 300px 300px 300px;
@@ -53,15 +56,16 @@ h1, h2, h3 {
     */
 }
 
-.titlePanel {
- 
-    grid-column: 1 / span 2;
+.titlePanel { 
     text-align: center;
     font-size: 1.3em;
     font-family: 'Oswald', sans-serif;
  
     color: var(--title-text-color);
     background-color: var(--title-bg-color);
+
+    /* for two columns */
+    grid-column: 1 / span 2;
 
     /* for three columns */
     /*

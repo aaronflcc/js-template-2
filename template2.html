@@ -13,11 +13,11 @@
             <div class="panel" id="firstPanel">
                 <p>First Panel</p>
                 <p>
-                    Text 1
-                    <input type="text" id="text1">
+                    Number
+                    <input type="number" id="number1">
                 </p>
                 <p>
-                    Text 2
+                    Text
                     <input type="text" id="text2">
                 </p>
             </div>
@@ -32,8 +32,10 @@
             </div>
 -->  
             <div class="panel-buttons">
-                <button type="button" onclick="action1();">Action 1</button>    
-                <button type="button" onclick="action2();">Action 2</button>
+                <!-- note that the buttons do not have onclick events... -->
+                <!-- in JS, you can AddEventListener("click", yourFunction) -->
+                <button type="button" id="action1">Action 1</button>    
+                <button type="button" id="action2">Action 2</button>
             </div>
         </div>
 <!--

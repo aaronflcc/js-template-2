@@ -1,8 +1,8 @@
 //If you include this javaScript file from a script element
 //at the end of the body element...
 //You can set up references to page elements here like this:
-const numberInput = document.getElementById("number1");
-const textInput = document.querySelector("#text2");
+const numberInput = document.getElementById("number-input");
+const textInput = document.querySelector("#text-input");
 
 //Find a button and decide which function it should invoke
 document.getElementById("action1").addEventListener("click", action1);
@@ -25,7 +25,7 @@ function action2() {
     let paragraphs = document.querySelectorAll("#secondPanel p");
     console.log(paragraphs.length + " paragraphs found.");
     for (let p of paragraphs) {
-        p.innerHTML = str + ", " + str2;
+        p.textContent = str + ", " + str2;
     }
     
 }
